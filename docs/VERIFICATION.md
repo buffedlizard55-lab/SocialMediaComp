@@ -28,6 +28,7 @@ cited source fetched on the date shown.** This file is the audit trail.
 | Wikipedia — List of most-followed Instagram accounts | https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts | as of June 2026 |
 | Wikipedia — List of most-followed Facebook pages | https://en.wikipedia.org/wiki/List_of_most-followed_Facebook_pages | as of 28 August 2026 |
 | Visual Capitalist — Ranked: Largest Communities on Reddit | https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/ | May 2025 |
+| Wikipedia — CZN Burak (article) | https://en.wikipedia.org/wiki/CZN_Burak | retrieved 2026-09-20; confirms chef/restaurateur identity behind entry 25's food topic |
 
 ## Batch 2 entries, verified line by line
 
@@ -36,8 +37,8 @@ cited source fetched on the date shown.** This file is the audit trail.
 | 21 | TikTok | @kimberly.loaiza | 83.5M followers, 4.3B likes | Wikipedia TikTok table rank 10 (Kimberly Loaiza, Mexico) | ✅ verified |
 | 22 | TikTok | @bts_official_bighit | 80.8M followers, 1.8B likes | Wikipedia TikTok table rank 11 (BTS, South Korea, "Band") | ✅ verified — flagged: band official account |
 | 23 | TikTok | @domelipa | 75.3M followers, 5.3B likes | Wikipedia TikTok table rank 15 (Dominik Lipa, Mexico) | ✅ verified |
-| 24 | TikTok | @vilmeijuga | 73.7M followers, 2.7B likes | Wikipedia TikTok table rank 17 (Meicy Villia, Indonesia) | ✅ verified |
-| 25 | TikTok | @cznburak | 73.3M followers, 1.6B likes | Wikipedia TikTok table rank 18 (CZN Burak, Turkey) | ✅ verified |
+| 24 | TikTok | @vilmeijuga | 73.7M followers, 2.7B likes | Wikipedia TikTok table rank 17 (Meicy Villia, Indonesia, "Social media personality and entrepreneur") | ✅ figure verified — see Q9 for topic-detail caveat |
+| 25 | TikTok | @cznburak | 73.3M followers, 1.6B likes | Wikipedia TikTok table rank 18 (CZN Burak, Turkey); food topic verified via his Wikipedia article (chef/restaurateur) | ✅ verified |
 | 26 | Instagram | @arianagrande | 363M | Wikipedia Instagram table (Ariana Grande, "Musician and actress", US) | ✅ verified |
 | 27 | Instagram | @kimkardashian | 344M | Wikipedia Instagram table (Kim Kardashian, "Media personality", US) | ✅ verified |
 | 28 | Instagram | @virat.kohli | 273M | Wikipedia Instagram table (Virat Kohli, "Cricketer", India) | ✅ verified |
@@ -81,6 +82,18 @@ williesalim 1.8, zachking 1.3, fifaworldcup 3.2).
   the cited list snapshots plus search snippets for Facebook slugs.
 - **Q7 — Reddit snapshot age:** Reddit member counts are from May 2025 (Visual Capitalist),
   ~16 months old at compile time.
+- **Q8 — Facebook page intro vs table (Shakira):** the page intro cites Shakira at
+  "123 million" followers while the 28 Aug 2026 table row shows 126M. The table value is
+  used in `master-list.json` (entry 34); the intro statement ("most-followed female
+  individual") is kept only with an explicit source attribution.
+- **Q9 — Entry 24 topic detail is third-party-sourced:** Wikipedia's TikTok table describes
+  @vilmeijuga only as "social media personality and entrepreneur". The lifestyle/comedy/slime
+  content description and the September-2020 account-creation date come from third-party
+  biography pages (Wikitia, celebsline), which are low-authority. The follower figure itself
+  is verified from Wikipedia; the topic detail is flagged in the JSON (`irregularity`) and
+  should be confirmed by opening the profile manually. An earlier draft of this batch
+  mislabeled her content as "magic"; that was caught in review and corrected — retained
+  here as an example of the line-by-line check working.
 
 ## Batch 1 verification record (PR #1, 2026-09-20)
 
