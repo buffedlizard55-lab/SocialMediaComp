@@ -1,0 +1,71 @@
+{
+  "disclaimer": "These are documented platform education resources and publicly described patterns from high-follower accounts. They are not guarantees of growth. Buying followers, bots, or engagement pods violate platform rules.",
+  "official_resources": [
+    {
+      "name": "TikTok Creator Academy",
+      "url": "https://www.tiktok.com/creator-academy",
+      "why": "Official in-product education for creators (algorithm, filming, community guidelines)."
+    },
+    {
+      "name": "TikTok Creative Center",
+      "url": "https://ads.tiktok.com/business/creativecenter",
+      "why": "Official trend and creative inspiration hub (ads/creators)."
+    },
+    {
+      "name": "Instagram Creators",
+      "url": "https://creators.instagram.com/",
+      "why": "Meta official creator resources."
+    },
+    {
+      "name": "Meta Business Help — Reels",
+      "url": "https://www.facebook.com/business/help",
+      "why": "Official Meta help for Facebook/Instagram business and Reels."
+    },
+    {
+      "name": "Reddit Content Policy",
+      "url": "https://www.redditinc.com/policies/content-policy",
+      "why": "Official rules; growth tactics that spam or vote-manipulate are prohibited."
+    },
+    {
+      "name": "Facebook Pages",
+      "url": "https://www.facebook.com/help",
+      "why": "Official Facebook Help Center."
+    }
+  ],
+  "observed_patterns": [
+    {
+      "pattern": "Language-free or highly visual content",
+      "example": "Khaby Lame silent comedy; Zach King illusions; r/aww animals",
+      "note": "Removes language barrier; supports completion and shares."
+    },
+    {
+      "pattern": "Trend participation + distinctive identity",
+      "example": "Charli D'Amelio / Addison Rae dance trends with recognizable style",
+      "note": "Trends aid discovery; identity aids follow conversion."
+    },
+    {
+      "pattern": "Cross-platform brand",
+      "example": "MrBeast YouTube → TikTok/Instagram",
+      "note": "Existing audience accelerates other platforms; not a from-zero tactic."
+    },
+    {
+      "pattern": "Celebrity / sports already-famous audiences",
+      "example": "Ronaldo, Messi, Selena Gomez",
+      "note": "Follower scale is not a transferable organic-from-zero playbook."
+    },
+    {
+      "pattern": "High rewatch formats",
+      "example": "Zach King jump-cuts; short loops",
+      "note": "Rewatches increase watch-time signals (platform-reported generally, not proven per-account here)."
+    }
+  ],
+  "topics_with_public_demand": [
+    "Pets / animals (r/aww; visual shareability)",
+    "Gaming (r/gaming)",
+    "Sports / football (FIFA, Ronaldo, Messi, Nike)",
+    "Beauty / makeup (Kylie Jenner — celebrity, not a how-to niche proof)",
+    "Dance / entertainment (Charli, Addison)",
+    "Comedy / reaction (Khaby)",
+    "Humor communities (r/funny, r/AskReddit)"
+  ]
+}
