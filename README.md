@@ -4,7 +4,7 @@ Competition-style leaderboard of high-reach social accounts and communities
 (TikTok, Instagram, Facebook, Reddit), with **cited sources for every row** and a
 line-by-line verification log.
 
-Live site (after GitHub Pages is enabled): `https://buffedlizard55-lab.github.io/SocialMediaComp/`
+Live site (GitHub Pages, enabled): `https://buffedlizard55-lab.github.io/SocialMediaComp/`
 
 ## What this is
 

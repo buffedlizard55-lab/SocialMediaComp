@@ -6,10 +6,10 @@ per-entry verification log in `docs/VERIFICATION.md`.
 
 ## Do next session
 
-1. **Confirm GitHub Pages is enabled** (repo Settings → Pages → Deploy from branch `main`, root).
-   The site only becomes live at `https://buffedlizard55-lab.github.io/SocialMediaComp/`
-   after that toggle; it cannot be flipped reliably from inside the repo. If it is already
-   enabled, just confirm the URL loads.
+1. **Confirm the Pages deployment shows the batch-2 content.** GitHub Pages is already
+   enabled (verified via the GitHub API on 2026-09-20: `status: built`, source `main` `/`,
+   `https://buffedlizard55-lab.github.io/SocialMediaComp/`). After this PR merges, the
+   rebuild takes a minute or two; just confirm the URL serves 40 entries.
 2. **Manual click-through of the 5 Facebook page slugs** (`facebook.com/netflix`,
    `/5min.crafts/`, `/MrBean/`, `/shakira`, `/WillSmith`) — they were verified via search
    snippets only because facebook.com refused connections from the build environment
