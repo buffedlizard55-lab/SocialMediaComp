@@ -12,13 +12,15 @@
       <p class="kicker">SocialMediaComp</p>
       <h1>Competition leaderboard</h1>
       <p class="lede">
-        Sourced snapshots of high-reach accounts and communities.
+        Sourced snapshots of high-reach accounts and communities across TikTok, Instagram, Facebook and Reddit.
         Figures are not live. Every row links to a profile and a list source for manual review.
       </p>
+      <p class="stats" id="stats" aria-live="polite"></p>
       <nav>
         <a href="#board">Leaderboard</a>
         <a href="#strategies">Strategies</a>
         <a href="#sources">Sources</a>
+        <a href="#flags">Flags &amp; verification</a>
         <a href="#limits">Limitations</a>
       </nav>
     </div>
@@ -32,12 +34,23 @@
           <option value="all">All</option>
           <option value="TikTok">TikTok</option>
           <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
           <option value="Reddit">Reddit</option>
         </select>
       </label>
       <label>
+        Cohort
+        <select id="cohort">
+          <option value="all">All</option>
+          <option value="creator">Creator</option>
+          <option value="celebrity">Celebrity</option>
+          <option value="brand">Brand / org</option>
+          <option value="community">Community</option>
+        </select>
+      </label>
+      <label>
         Search
-        <input id="q" type="search" placeholder="Handle, owner, topic" />
+        <input id="q" type="search" placeholder="Handle, owner, topic, country" />
       </label>
       <p class="count" id="count"></p>
     </section>
@@ -51,7 +64,9 @@
             <th>Handle</th>
             <th>Owner</th>
             <th>Topic</th>
-            <th>Metric</th>
+            <th>Cohort</th>
+            <th>Country</th>
+            <th><button id="sort-metric" class="sort" title="Sort by metric">Metric ⇅</button></th>
             <th>Sources</th>
             <th>Flags</th>
           </tr>
@@ -73,23 +88,35 @@
     <section id="sources">
       <h2>Primary list sources</h2>
       <ul>
-        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts" rel="noopener">Wikipedia — most-followed TikTok accounts</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts" rel="noopener">Wikipedia — most-followed Instagram accounts</a></li>
-        <li><a href="https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/" rel="noopener">Visual Capitalist — largest Reddit communities (May 2025)</a></li>
-        <li><a href="https://www.tiktok.com/creator-academy" rel="noopener">TikTok Creator Academy</a></li>
-        <li><a href="https://creators.instagram.com/" rel="noopener">Instagram Creators</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts" rel="noopener">Wikipedia — most-followed TikTok accounts</a> (table as of 7 September 2026)</li>
+        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts" rel="noopener">Wikipedia — most-followed Instagram accounts</a> (table as of June 2026)</li>
+        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_Facebook_pages" rel="noopener">Wikipedia — most-followed Facebook pages</a> (table as of 28 August 2026)</li>
+        <li><a href="https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/" rel="noopener">Visual Capitalist — largest Reddit communities</a> (May 2025, data from Reddit)</li>
+        <li><a href="https://www.tiktok.com/creator-academy" rel="noopener">TikTok Creator Academy</a> (official education)</li>
+        <li><a href="https://creators.instagram.com/" rel="noopener">Instagram Creators</a> (official education)</li>
       </ul>
     </section>
 
+    <section id="flags">
+      <h2>Flags &amp; verification</h2>
+      <p class="note">
+        Every figure was checked line-by-line against the cited source table before being added.
+        Full per-entry log:
+        <a href="https://github.com/buffedlizard55-lab/SocialMediaComp/blob/main/docs/VERIFICATION.md" rel="noopener">docs/VERIFICATION.md</a>.
+        Flagged rows are highlighted below.
+      </p>
+      <ul id="flag-summary"></ul>
+    </section>
+
     <section id="limits">
-      <h2>Limitations and flags</h2>
+      <h2>Limitations</h2>
       <ul id="meta-limits"></ul>
-      <p>See <code>docs/NEXT_SESSION.md</code> in the repository for remaining work.</p>
+      <p>Remaining work: <a href="https://github.com/buffedlizard55-lab/SocialMediaComp/blob/main/docs/NEXT_SESSION.md" rel="noopener">docs/NEXT_SESSION.md</a>.</p>
     </section>
   </main>
 
   <footer class="wrap">
-    <p>Compiled 2026-09-20. No live scrape. Verify each official link before relying on a number.</p>
+    <p>Batch 1 (entries 1–20) merged via PR #1; batch 2 (entries 21–40) added 2026-09-20. No live scrape. Verify each official link before relying on a number.</p>
   </footer>
   <script src="assets/app.js"></script>
 </body>

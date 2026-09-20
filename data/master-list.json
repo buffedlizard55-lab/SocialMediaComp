@@ -2,14 +2,21 @@
   "meta": {
     "title": "Social Media Competition Leaderboard — Master List",
     "compiled": "2026-09-20",
-    "entry_count": 20,
+    "entry_count": 40,
     "verification_rule": "Every follower/member figure is taken from a cited Wikipedia list page (or the official platform URL for the profile). Figures are snapshots; live counts change. No live API scrape was performed.",
     "limitations": [
       "Wikipedia lists are secondary aggregations and can lag live platform counts.",
       "TikTok, Instagram, Facebook, and Reddit do not provide a public unauthenticated bulk follower API for this project.",
       "Brand/platform accounts (TikTok, Instagram) are included because they appear on official most-followed lists; they are not independent creator growth case studies.",
-      "Organic vs paid/boosted growth cannot be proven from public follower totals alone."
-    ]
+      "Organic vs paid/boosted growth cannot be proven from public follower totals alone.",
+      "Batch 2: tiktok.com, instagram.com, facebook.com and reddit.com were unreachable from the build environment (network-blocked), so figures come from the cited list snapshots, not live fetches; see docs/VERIFICATION.md.",
+      "Facebook profile URLs (slugs) were cross-checked with search-result snippets of the pages themselves, not opened directly; flagged for manual review.",
+      "Wikipedia's Facebook table has an internal ordering quirk (rank 8 = 126M listed before rank 9 = 128M); figures are used as published."
+    ],
+    "batches": {
+      "batch_1": "Entries 1-20, merged via PR #1 (2026-09-20).",
+      "batch_2": "Entries 21-40, added this session (2026-09-20). Adds Facebook coverage and food/K-pop/magic/cricket/photography topics."
+    }
   },
   "entries": [
     {
@@ -25,7 +32,11 @@
       "source_name": "Wikipedia: List of most-followed TikTok accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
       "growth_notes": "Silent, universally readable sketches mocking overcomplicated life-hacks; high completion without language barrier.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "creator",
+      "country": "Italy / Senegal",
+      "likes_billions": 2.7,
+      "added_batch": 1
     },
     {
       "id": 2,
@@ -40,7 +51,11 @@
       "source_name": "Wikipedia: List of most-followed TikTok accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
       "growth_notes": "Early mover on dance trends; first TikTok user reported to 100 million followers (Wikipedia).",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "creator",
+      "country": "United States",
+      "likes_billions": 12.3,
+      "added_batch": 1
     },
     {
       "id": 3,
@@ -55,7 +70,11 @@
       "source_name": "Wikipedia: List of most-followed TikTok accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
       "growth_notes": "Cross-platform YouTube brand; high-stakes challenge format and giveaways.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "creator",
+      "country": "United States",
+      "likes_billions": 1.5,
+      "added_batch": 1
     },
     {
       "id": 4,
@@ -71,7 +90,11 @@
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
       "growth_notes": "Official brand account — not a creator growth case. Flagged as brand.",
       "verified_list": true,
-      "irregularity": "Brand/platform account, not an independent creator."
+      "irregularity": "Brand/platform account, not an independent creator.",
+      "cohort": "brand",
+      "country": "China",
+      "likes_billions": 0.46,
+      "added_batch": 1
     },
     {
       "id": 5,
@@ -86,7 +109,11 @@
       "source_name": "Wikipedia: List of most-followed TikTok accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
       "growth_notes": "Viral lip-sync loop then music/entertainment expansion.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "creator",
+      "country": "Philippines / United States",
+      "likes_billions": 2.4,
+      "added_batch": 1
     },
     {
       "id": 6,
@@ -101,7 +128,11 @@
       "source_name": "Wikipedia: List of most-followed TikTok accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
       "growth_notes": "Dance trends and entertainment crossover.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "creator",
+      "country": "United States",
+      "likes_billions": 5.3,
+      "added_batch": 1
     },
     {
       "id": 7,
@@ -116,7 +147,11 @@
       "source_name": "Wikipedia: List of most-followed TikTok accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
       "growth_notes": "Indonesia-based; street-interaction / giveaway style content (category per Wikipedia description as social media personality).",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "creator",
+      "country": "Indonesia",
+      "likes_billions": 1.8,
+      "added_batch": 1
     },
     {
       "id": 8,
@@ -131,7 +166,11 @@
       "source_name": "Wikipedia: List of most-followed TikTok accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
       "growth_notes": "One-shot visual illusions; high rewatch (completion) signal.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "creator",
+      "country": "United States",
+      "likes_billions": 1.3,
+      "added_batch": 1
     },
     {
       "id": 9,
@@ -147,7 +186,11 @@
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
       "growth_notes": "Event/brand sports account. Flagged as brand.",
       "verified_list": true,
-      "irregularity": "Brand/event account, not an independent creator."
+      "irregularity": "Brand/event account, not an independent creator.",
+      "cohort": "brand",
+      "country": "Switzerland (international HQ)",
+      "likes_billions": 3.2,
+      "added_batch": 1
     },
     {
       "id": 10,
@@ -163,7 +206,10 @@
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
       "growth_notes": "Official platform account.",
       "verified_list": true,
-      "irregularity": "Brand/platform account."
+      "irregularity": "Brand/platform account.",
+      "cohort": "brand",
+      "country": "United States",
+      "added_batch": 1
     },
     {
       "id": 11,
@@ -178,7 +224,10 @@
       "source_name": "Wikipedia: List of most-followed Instagram accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
       "growth_notes": "Global sports celebrity; most-followed person on Instagram per Wikipedia.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "celebrity",
+      "country": "Portugal",
+      "added_batch": 1
     },
     {
       "id": 12,
@@ -193,7 +242,10 @@
       "source_name": "Wikipedia: List of most-followed Instagram accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
       "growth_notes": "Global sports celebrity.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "celebrity",
+      "country": "Argentina",
+      "added_batch": 1
     },
     {
       "id": 13,
@@ -208,7 +260,10 @@
       "source_name": "Wikipedia: List of most-followed Instagram accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
       "growth_notes": "Most-followed woman on Instagram per Wikipedia.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "celebrity",
+      "country": "United States",
+      "added_batch": 1
     },
     {
       "id": 14,
@@ -223,7 +278,10 @@
       "source_name": "Wikipedia: List of most-followed Instagram accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
       "growth_notes": "Personal brand + film promotion; high posting consistency historically.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "celebrity",
+      "country": "United States",
+      "added_batch": 1
     },
     {
       "id": 15,
@@ -238,7 +296,10 @@
       "source_name": "Wikipedia: List of most-followed Instagram accounts",
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
       "growth_notes": "Beauty/commerce + reality-TV audience.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "celebrity",
+      "country": "United States",
+      "added_batch": 1
     },
     {
       "id": 16,
@@ -254,7 +315,10 @@
       "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
       "growth_notes": "Most-followed brand besides Instagram itself per Wikipedia.",
       "verified_list": true,
-      "irregularity": "Brand account."
+      "irregularity": "Brand account.",
+      "cohort": "brand",
+      "country": "United States",
+      "added_batch": 1
     },
     {
       "id": 17,
@@ -269,7 +333,10 @@
       "source_name": "Visual Capitalist: Ranked largest communities on Reddit",
       "source_url": "https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/",
       "growth_notes": "Broad humor community; default-style discovery historically.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "community",
+      "country": null,
+      "added_batch": 1
     },
     {
       "id": 18,
@@ -284,7 +351,10 @@
       "source_name": "Visual Capitalist: Ranked largest communities on Reddit",
       "source_url": "https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/",
       "growth_notes": "Text-first engagement; question format drives comments.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "community",
+      "country": null,
+      "added_batch": 1
     },
     {
       "id": 19,
@@ -299,7 +369,10 @@
       "source_name": "Visual Capitalist: Ranked largest communities on Reddit",
       "source_url": "https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/",
       "growth_notes": "Evergreen topic with constant new titles and news.",
-      "verified_list": true
+      "verified_list": true,
+      "cohort": "community",
+      "country": null,
+      "added_batch": 1
     },
     {
       "id": 20,
@@ -314,6 +387,380 @@
       "source_name": "Visual Capitalist: Ranked largest communities on Reddit",
       "source_url": "https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/",
       "growth_notes": "Pets/animals — high-share visual content.",
+      "verified_list": true,
+      "cohort": "community",
+      "country": null,
+      "added_batch": 1
+    },
+    {
+      "id": 21,
+      "added_batch": 2,
+      "platform": "TikTok",
+      "handle": "@kimberly.loaiza",
+      "owner": "Kimberly Loaiza",
+      "topic": "Music / lifestyle (Spanish-language)",
+      "cohort": "creator",
+      "country": "Mexico",
+      "metric_label": "Followers (millions, rounded)",
+      "metric_value": 83.5,
+      "likes_billions": 4.3,
+      "snapshot_note": "Wikipedia TikTok list as of 7 September 2026 (rank 10)",
+      "profile_url": "https://www.tiktok.com/@kimberly.loaiza",
+      "source_name": "Wikipedia: List of most-followed TikTok accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
+      "growth_notes": "Top Spanish-language creator; Latin-market scale shows non-English content can reach the global top tier.",
+      "verified_list": true
+    },
+    {
+      "id": 22,
+      "added_batch": 2,
+      "platform": "TikTok",
+      "handle": "@bts_official_bighit",
+      "owner": "BTS",
+      "topic": "K-pop / music",
+      "cohort": "celebrity",
+      "country": "South Korea",
+      "metric_label": "Followers (millions, rounded)",
+      "metric_value": 80.8,
+      "likes_billions": 1.8,
+      "snapshot_note": "Wikipedia TikTok list as of 7 September 2026 (rank 11)",
+      "profile_url": "https://www.tiktok.com/@bts_official_bighit",
+      "source_name": "Wikipedia: List of most-followed TikTok accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
+      "growth_notes": "Band official account; fandom-driven engagement.",
+      "verified_list": true,
+      "irregularity": "Band official account (label-run), not an individual creator."
+    },
+    {
+      "id": 23,
+      "added_batch": 2,
+      "platform": "TikTok",
+      "handle": "@domelipa",
+      "owner": "Dominik Lipa",
+      "topic": "Dance / lifestyle",
+      "cohort": "creator",
+      "country": "Mexico",
+      "metric_label": "Followers (millions, rounded)",
+      "metric_value": 75.3,
+      "likes_billions": 5.3,
+      "snapshot_note": "Wikipedia TikTok list as of 7 September 2026 (rank 15)",
+      "profile_url": "https://www.tiktok.com/@domelipa",
+      "source_name": "Wikipedia: List of most-followed TikTok accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
+      "growth_notes": "5.3B likes on 75.3M followers = ~70 likes per follower, one of the highest engagement-density figures in the list.",
+      "verified_list": true
+    },
+    {
+      "id": 24,
+      "added_batch": 2,
+      "platform": "TikTok",
+      "handle": "@vilmeijuga",
+      "owner": "Meicy Villia",
+      "topic": "Magic / creative skits",
+      "cohort": "creator",
+      "country": "Indonesia",
+      "metric_label": "Followers (millions, rounded)",
+      "metric_value": 73.7,
+      "likes_billions": 2.7,
+      "snapshot_note": "Wikipedia TikTok list as of 7 September 2026 (rank 17)",
+      "profile_url": "https://www.tiktok.com/@vilmeijuga",
+      "source_name": "Wikipedia: List of most-followed TikTok accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
+      "growth_notes": "Unique account: language-free magic/creative skits from Indonesia; same no-language-barrier pattern as Khaby Lame / Zach King.",
+      "verified_list": true
+    },
+    {
+      "id": 25,
+      "added_batch": 2,
+      "platform": "TikTok",
+      "handle": "@cznburak",
+      "owner": "CZN Burak",
+      "topic": "Food / cooking",
+      "cohort": "creator",
+      "country": "Turkey",
+      "metric_label": "Followers (millions, rounded)",
+      "metric_value": 73.3,
+      "likes_billions": 1.6,
+      "snapshot_note": "Wikipedia TikTok list as of 7 September 2026 (rank 18)",
+      "profile_url": "https://www.tiktok.com/@cznburak",
+      "source_name": "Wikipedia: List of most-followed TikTok accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts",
+      "growth_notes": "Unique account: cooking/food content — a visual, language-light topic with global reach.",
+      "verified_list": true
+    },
+    {
+      "id": 26,
+      "added_batch": 2,
+      "platform": "Instagram",
+      "handle": "@arianagrande",
+      "owner": "Ariana Grande",
+      "topic": "Music",
+      "cohort": "celebrity",
+      "country": "United States",
+      "metric_label": "Followers (millions)",
+      "metric_value": 363,
+      "snapshot_note": "Wikipedia Instagram list as of June 2026",
+      "profile_url": "https://www.instagram.com/arianagrande",
+      "source_name": "Wikipedia: List of most-followed Instagram accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
+      "growth_notes": "Musician/actress; celebrity audience carried from music career.",
+      "verified_list": true
+    },
+    {
+      "id": 27,
+      "added_batch": 2,
+      "platform": "Instagram",
+      "handle": "@kimkardashian",
+      "owner": "Kim Kardashian",
+      "topic": "Beauty / fashion / media personality",
+      "cohort": "celebrity",
+      "country": "United States",
+      "metric_label": "Followers (millions)",
+      "metric_value": 344,
+      "snapshot_note": "Wikipedia Instagram list as of June 2026",
+      "profile_url": "https://www.instagram.com/kimkardashian",
+      "source_name": "Wikipedia: List of most-followed Instagram accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
+      "growth_notes": "Media personality; beauty/fashion commerce crossover.",
+      "verified_list": true
+    },
+    {
+      "id": 28,
+      "added_batch": 2,
+      "platform": "Instagram",
+      "handle": "@virat.kohli",
+      "owner": "Virat Kohli",
+      "topic": "Sports (cricket)",
+      "cohort": "celebrity",
+      "country": "India",
+      "metric_label": "Followers (millions)",
+      "metric_value": 273,
+      "snapshot_note": "Wikipedia Instagram list as of June 2026",
+      "profile_url": "https://www.instagram.com/virat.kohli",
+      "source_name": "Wikipedia: List of most-followed Instagram accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
+      "growth_notes": "Cricketer; shows scale of the Indian market and cricket as a growth topic.",
+      "verified_list": true
+    },
+    {
+      "id": 29,
+      "added_batch": 2,
+      "platform": "Instagram",
+      "handle": "@natgeo",
+      "owner": "National Geographic",
+      "topic": "Photography / science media",
+      "cohort": "brand",
+      "country": "United States",
+      "metric_label": "Followers (millions)",
+      "metric_value": 269,
+      "snapshot_note": "Wikipedia Instagram list as of June 2026",
+      "profile_url": "https://www.instagram.com/natgeo",
+      "source_name": "Wikipedia: List of most-followed Instagram accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
+      "growth_notes": "Unique account: photography-led brand account; evergreen visual content.",
+      "verified_list": true,
+      "irregularity": "Brand account (magazine), not an independent creator."
+    },
+    {
+      "id": 30,
+      "added_batch": 2,
+      "platform": "Instagram",
+      "handle": "@kevinhart4real",
+      "owner": "Kevin Hart",
+      "topic": "Comedy",
+      "cohort": "celebrity",
+      "country": "United States",
+      "metric_label": "Followers (millions)",
+      "metric_value": 172,
+      "snapshot_note": "Wikipedia Instagram list as of June 2026",
+      "profile_url": "https://www.instagram.com/kevinhart4real",
+      "source_name": "Wikipedia: List of most-followed Instagram accounts",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts",
+      "growth_notes": "Comedian; personality-driven posting.",
+      "verified_list": true
+    },
+    {
+      "id": 31,
+      "added_batch": 2,
+      "platform": "Facebook",
+      "handle": "Netflix",
+      "owner": "Netflix (page)",
+      "topic": "Streaming / entertainment",
+      "cohort": "brand",
+      "country": "United States",
+      "metric_label": "Followers (millions)",
+      "metric_value": 205,
+      "snapshot_note": "Wikipedia Facebook pages list as of 28 August 2026 (rank 1)",
+      "profile_url": "https://www.facebook.com/netflix",
+      "source_name": "Wikipedia: List of most-followed Facebook pages",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Facebook_pages",
+      "growth_notes": "Most-followed Facebook page; global entertainment brand. Page slug verified via search snippet ('Netflix global page').",
+      "verified_list": true,
+      "irregularity": "Brand account."
+    },
+    {
+      "id": 32,
+      "added_batch": 2,
+      "platform": "Facebook",
+      "handle": "5-Minute Crafts",
+      "owner": "5-Minute Crafts (TheSoul Publishing)",
+      "topic": "DIY / life hacks",
+      "cohort": "brand",
+      "country": "Cyprus",
+      "metric_label": "Followers (millions)",
+      "metric_value": 147,
+      "snapshot_note": "Wikipedia Facebook pages list as of 28 August 2026 (rank 5)",
+      "profile_url": "https://www.facebook.com/5min.crafts/",
+      "source_name": "Wikipedia: List of most-followed Facebook pages",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Facebook_pages",
+      "growth_notes": "Unique account: industrial-scale short DIY/life-hack video production; one of the fastest-growing Facebook pages historically. Page slug verified via search snippet (TheSoul Publishing).",
+      "verified_list": true,
+      "irregularity": "Media-company content studio (TheSoul Publishing), not an individual creator."
+    },
+    {
+      "id": 33,
+      "added_batch": 2,
+      "platform": "Facebook",
+      "handle": "Mr. Bean",
+      "owner": "Mr. Bean (character page, Banijay Rights)",
+      "topic": "Comedy (character)",
+      "cohort": "brand",
+      "country": "United Kingdom",
+      "metric_label": "Followers (millions)",
+      "metric_value": 141,
+      "snapshot_note": "Wikipedia Facebook pages list as of 28 August 2026 (rank 6)",
+      "profile_url": "https://www.facebook.com/MrBean/",
+      "source_name": "Wikipedia: List of most-followed Facebook pages",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Facebook_pages",
+      "growth_notes": "Fictional-character page; silent physical comedy travels across languages. Page slug verified via search snippet (official page).",
+      "verified_list": true,
+      "irregularity": "Fictional-character page run by rights holder (Banijay Rights), not a person or creator."
+    },
+    {
+      "id": 34,
+      "added_batch": 2,
+      "platform": "Facebook",
+      "handle": "Shakira",
+      "owner": "Shakira",
+      "topic": "Music",
+      "cohort": "celebrity",
+      "country": "Colombia",
+      "metric_label": "Followers (millions)",
+      "metric_value": 126,
+      "snapshot_note": "Wikipedia Facebook pages list as of 28 August 2026 (rank 8)",
+      "profile_url": "https://www.facebook.com/shakira",
+      "source_name": "Wikipedia: List of most-followed Facebook pages",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Facebook_pages",
+      "growth_notes": "Most-followed female individual on Facebook per the Wikipedia page intro. Page slug verified via search snippet (official page).",
+      "verified_list": true,
+      "irregularity": "Wikipedia table orders rank 8 (126M) ahead of rank 9 (128M); figure used as published, rank noted."
+    },
+    {
+      "id": 35,
+      "added_batch": 2,
+      "platform": "Facebook",
+      "handle": "Will Smith",
+      "owner": "Will Smith",
+      "topic": "Entertainment",
+      "cohort": "celebrity",
+      "country": "United States",
+      "metric_label": "Followers (millions)",
+      "metric_value": 113,
+      "snapshot_note": "Wikipedia Facebook pages list as of 28 August 2026 (rank 12)",
+      "profile_url": "https://www.facebook.com/WillSmith",
+      "source_name": "Wikipedia: List of most-followed Facebook pages",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-followed_Facebook_pages",
+      "growth_notes": "Actor; figure independently corroborated by a search snippet of the page itself (113M). Page slug verified.",
+      "verified_list": true
+    },
+    {
+      "id": 36,
+      "added_batch": 2,
+      "platform": "Reddit",
+      "handle": "r/todayilearned",
+      "owner": "r/todayilearned community",
+      "topic": "Education / curiosity",
+      "cohort": "community",
+      "country": null,
+      "metric_label": "Members (millions, approx.)",
+      "metric_value": 41,
+      "snapshot_note": "Visual Capitalist, May 2025 (rank 5)",
+      "profile_url": "https://www.reddit.com/r/todayilearned/",
+      "source_name": "Visual Capitalist: Ranked largest communities on Reddit",
+      "source_url": "https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/",
+      "growth_notes": "Curiosity-driven 'fact' posts; comment-heavy engagement.",
+      "verified_list": true
+    },
+    {
+      "id": 37,
+      "added_batch": 2,
+      "platform": "Reddit",
+      "handle": "r/Music",
+      "owner": "r/Music community",
+      "topic": "Music",
+      "cohort": "community",
+      "country": null,
+      "metric_label": "Members (millions, approx.)",
+      "metric_value": 38,
+      "snapshot_note": "Visual Capitalist, May 2025 (rank 6)",
+      "profile_url": "https://www.reddit.com/r/Music/",
+      "source_name": "Visual Capitalist: Ranked largest communities on Reddit",
+      "source_url": "https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/",
+      "growth_notes": "Evergreen music news/streaming links.",
+      "verified_list": true
+    },
+    {
+      "id": 38,
+      "added_batch": 2,
+      "platform": "Reddit",
+      "handle": "r/movies",
+      "owner": "r/movies community",
+      "topic": "Movies",
+      "cohort": "community",
+      "country": null,
+      "metric_label": "Members (millions, approx.)",
+      "metric_value": 36,
+      "snapshot_note": "Visual Capitalist, May 2025 (rank 8)",
+      "profile_url": "https://www.reddit.com/r/movies/",
+      "source_name": "Visual Capitalist: Ranked largest communities on Reddit",
+      "source_url": "https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/",
+      "growth_notes": "Trailers/news/discussion; steady event-driven spikes.",
+      "verified_list": true
+    },
+    {
+      "id": 39,
+      "added_batch": 2,
+      "platform": "Reddit",
+      "handle": "r/memes",
+      "owner": "r/memes community",
+      "topic": "Memes / humor",
+      "cohort": "community",
+      "country": null,
+      "metric_label": "Members (millions, approx.)",
+      "metric_value": 35,
+      "snapshot_note": "Visual Capitalist, May 2025 (rank 9)",
+      "profile_url": "https://www.reddit.com/r/memes/",
+      "source_name": "Visual Capitalist: Ranked largest communities on Reddit",
+      "source_url": "https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/",
+      "growth_notes": "High-velocity shareable format.",
+      "verified_list": true
+    },
+    {
+      "id": 40,
+      "added_batch": 2,
+      "platform": "Reddit",
+      "handle": "r/science",
+      "owner": "r/science community",
+      "topic": "Science",
+      "cohort": "community",
+      "country": null,
+      "metric_label": "Members (millions, approx.)",
+      "metric_value": 34,
+      "snapshot_note": "Visual Capitalist, May 2025 (rank 11)",
+      "profile_url": "https://www.reddit.com/r/science/",
+      "source_name": "Visual Capitalist: Ranked largest communities on Reddit",
+      "source_url": "https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/",
+      "growth_notes": "Rule-moderated discussion; AMAs with researchers.",
       "verified_list": true
     }
   ]
