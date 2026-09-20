@@ -1,21 +1,52 @@
 # Work remaining and limitations
 
+Status after the 2026-09-20 batch-2 session: **40 entries** across TikTok, Instagram,
+Facebook and Reddit; Facebook coverage added; cohort/country/likes fields added;
+per-entry verification log in `docs/VERIFICATION.md`.
+
 ## Do next session
-1. Enable GitHub Pages in repo Settings → Pages → Deploy from branch `main` / `/docs` or root (`index.html`). This session cannot toggle that setting via git alone.
-2. Add live-count refresh only with official APIs and stored secrets (TikTok Research API, Meta Graph API, Reddit OAuth). Without keys, do not scrape.
-3. Expand beyond top-50 celebrities to mid-tier *organic* niche accounts (pets, makeup tutorials, indie gaming) once each profile can be opened and screenshotted with date-stamped follower counts.
-4. Facebook Pages: add a Wikipedia or CrowdTangle-backed list when a comparable sourced table is confirmed line-by-line.
-5. Separate “celebrity/brand” vs “creator-from-zero” cohorts so the leaderboard is not dominated by already-famous people.
-6. Document engagement-rate (likes/comments per follower), not only follower totals — totals are a poor proxy for *fast* growth.
+
+1. **Confirm the Pages deployment shows the batch-2 content.** GitHub Pages is already
+   enabled (verified via the GitHub API on 2026-09-20: `status: built`, source `main` `/`,
+   `https://buffedlizard55-lab.github.io/SocialMediaComp/`). After this PR merges, the
+   rebuild takes a minute or two; just confirm the URL serves 40 entries.
+2. **Manual click-through of the 5 Facebook page slugs** (`facebook.com/netflix`,
+   `/5min.crafts/`, `/MrBean/`, `/shakira`, `/WillSmith`) — they were verified via search
+   snippets only because facebook.com refused connections from the build environment
+   (see VERIFICATION.md Q6).
+3. **Mid-tier organic niche accounts.** The lists are still top-of-funnel celebrities/brands.
+   Add pets, makeup-tutorial, and indie-gaming creators whose follower counts can be
+   captured with date-stamped screenshots or official APIs — needed for a real
+   "fastest organic growth" competition rather than a biggest-total list.
+4. **Engagement-rate dataset.** TikTok's public table includes cumulative likes, so a
+   likes-per-follower column is computable now for TikTok rows; Instagram/Facebook/Reddit
+   engagement needs official APIs (Meta Graph API, Reddit OAuth) with stored secrets.
+   Without keys, do not scrape.
+5. **YouTube + X coverage.** Wikipedia's "List of most-subscribed YouTube channels" and
+   Visual Capitalist's "Most Followed People on X in 2026" both exist and are citable the
+   same way; add them as a batch 3 (~20 more entries).
+6. **Growth deltas.** A leaderboard competition needs *change over time*. Take dated
+   snapshots of `master-list.json` (e.g. `data/snapshots/2026-09.json`) and compute deltas
+   per entry once at least two snapshots exist.
+7. **Refresh aging rows.** Reddit rows are May-2025 snapshots (VERIFICATION.md Q7); refresh
+   when reddit.com is reachable or via an authenticated API.
+8. **Cohort analysis page.** The `cohort` filter exists; a dedicated view comparing
+   creator vs celebrity vs brand medians would directly answer "which cohort grows fastest".
 
 ## Limitations blocking a fully successful project
-- No unauthenticated official bulk APIs; live numbers here are **snapshots from secondary lists**.
-- Wikipedia and Visual Capitalist **lag** and round figures.
-- Cannot prove “organic” vs purchased/boosted from public totals.
-- Arena session cannot merge onto `main` if branch policy forbids switching; PR is opened from the session branch.
-- GitHub Pages URL is `https://<owner>.github.io/SocialMediaComp/` only after Pages is enabled.
 
-## Irregularities flagged
-- Entries 4, 9, 10, 16 are **brand/platform/event** accounts, not independent creators.
-- Reddit figures are **May 2025** Visual Capitalist, not 2026-09-20 live counts.
-- TikTok FIFA row used the Wikipedia table (rank 9, 85.4M) from the same fetch as ranks 1–8.
+- No unauthenticated official bulk follower APIs for TikTok/Instagram/Facebook; all figures
+  are **snapshots from cited secondary lists**, not live counts.
+- The build environment's network blocks tiktok.com, instagram.com, facebook.com and
+  reddit.com, so direct profile cross-checks are impossible here (VERIFICATION.md Q6).
+- "Organic" growth cannot be proven from public totals; brand/celebrity/character pages are
+  flagged but a bought-followers audit is out of reach.
+- Wikipedia/Visual Capitalist figures lag and round (Reddit: ±0.5M and ~16 months old).
+- Fastest-growth ranking requires ≥2 dated snapshots; only one snapshot per entry exists so far.
+
+## Irregularities flagged to date
+
+Batch 1 (PR #1): entries 4, 9, 10, 16 are brand/platform/event accounts; Reddit figures are
+May 2025. Batch 2: see `docs/VERIFICATION.md` quirks Q1–Q7 (page-internal rounding
+inconsistencies, Facebook table ordering quirk, band/brand/character accounts, slug
+verification limits, Reddit snapshot age).

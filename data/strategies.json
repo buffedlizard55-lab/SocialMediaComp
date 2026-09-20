@@ -57,15 +57,58 @@
       "pattern": "High rewatch formats",
       "example": "Zach King jump-cuts; short loops",
       "note": "Rewatches increase watch-time signals (platform-reported generally, not proven per-account here)."
+    },
+    {
+      "pattern": "Non-English market scale",
+      "example": "Kimberly Loaiza and Domelipa (Spanish, Mexico); Willie Salim and Meicy Villia (Indonesia); CZN Burak (Turkish food)",
+      "note": "Four of the top-20 TikTok accounts are non-English-first creators; large regional audiences can outgrow saturated English niches."
+    },
+    {
+      "pattern": "Food / cooking as a language-free topic",
+      "example": "CZN Burak (73.3M TikTok)",
+      "note": "Cooking content is visual and needs little or no dialogue — same completion/share mechanics as silent comedy."
+    },
+    {
+      "pattern": "Rapid from-zero creator growth",
+      "example": "Meicy Villia (@vilmeijuga, 73.7M TikTok)",
+      "note": "Third-party bios state her TikTok account was created in September 2020 and reached the top 20 within ~5 years — evidence the top tier is not closed to new accounts (date is third-party-sourced, flagged in VERIFICATION.md)."
+    },
+    {
+      "pattern": "Fandom-driven accounts",
+      "example": "BTS official TikTok (80.8M)",
+      "note": "Organized fandoms convert follow/like/share at high rates; band/label-run, not a from-zero creator playbook."
+    },
+    {
+      "pattern": "High likes-per-follower density",
+      "example": "Domelipa ~70 likes per follower (5.3B likes / 75.3M); Charli D'Amelio 12.3B / 160M",
+      "note": "Cumulative likes per follower is a rough public engagement-density signal; higher suggests repeat interaction, not just passive follows."
+    },
+    {
+      "pattern": "Curiosity / learning communities",
+      "example": "r/todayilearned (41M), r/science (34M)",
+      "note": "Fact-sharing formats drive comments and upvotes; evergreen because every post teaches something new."
+    },
+    {
+      "pattern": "Industrial content production",
+      "example": "5-Minute Crafts (147M Facebook followers)",
+      "note": "Studio-produced short DIY/life-hack videos at high volume; growth from format and volume, not personality. Quality/accuracy of hacks is publicly criticized — not an endorsement."
     }
   ],
   "topics_with_public_demand": [
     "Pets / animals (r/aww; visual shareability)",
     "Gaming (r/gaming)",
-    "Sports / football (FIFA, Ronaldo, Messi, Nike)",
-    "Beauty / makeup (Kylie Jenner — celebrity, not a how-to niche proof)",
-    "Dance / entertainment (Charli, Addison)",
-    "Comedy / reaction (Khaby)",
-    "Humor communities (r/funny, r/AskReddit)"
+    "Sports / football (FIFA, Ronaldo, Messi, Nike, Real Madrid/Barcelona pages)",
+    "Cricket — Indian market scale (Virat Kohli, 273M Instagram)",
+    "Beauty / makeup (Kylie Jenner, Kim Kardashian — celebrity-led, not niche proof)",
+    "Dance / entertainment (Charli, Addison, Domelipa)",
+    "Comedy / reaction (Khaby, Kevin Hart, Mr. Bean)",
+    "Humor communities (r/funny, r/AskReddit, r/memes)",
+    "Food / cooking (CZN Burak)",
+    "Illusion / editing tricks (Zach King)",
+    "K-pop / music fandoms (BTS, Ariana Grande, Shakira, r/Music)",
+    "Movies / entertainment news (r/movies, Netflix page)",
+    "Photography / science visuals (National Geographic)",
+    "DIY / life hacks (5-Minute Crafts)",
+    "Education / curiosity facts (r/todayilearned, r/science)"
   ]
 }
