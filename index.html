@@ -3,43 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sourced leaderboard of high-reach social accounts. Every figure links to the page it was read from." />
   <title>Social Media Comp — Leaderboard</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+  <a class="skip" href="#board">Skip to leaderboard</a>
   <header class="top">
     <div class="wrap">
       <p class="kicker">SocialMediaComp</p>
       <h1>Competition leaderboard</h1>
       <p class="lede">
-        Sourced snapshots of high-reach accounts and communities across TikTok, Instagram, Facebook,
-        Reddit, YouTube, X and Twitch.
-        Figures are not live. Every row links to a profile and a list source for manual review.
+        Dated snapshots of high-reach accounts and communities — TikTok, Instagram,
+        Facebook, Reddit, YouTube, X and Twitch. Not live counts. Not a buying-followers guide.
+        Every row has a profile link and a source link for manual review.
       </p>
-      <p class="stats" id="stats" aria-live="polite"></p>
-      <nav>
+      <p class="stats" id="stats" aria-live="polite">Loading sourced rows…</p>
+      <nav aria-label="Page">
         <a href="#board">Leaderboard</a>
+        <a href="#clocks">Cited clocks</a>
         <a href="#strategies">Strategies</a>
+        <a href="#engagement">Likes</a>
+        <a href="#cohorts">Cohorts</a>
         <a href="#sources">Sources</a>
-        <a href="#flags">Flags &amp; verification</a>
+        <a href="#flags">Flags</a>
         <a href="#limits">Limitations</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
+    <section class="howto" aria-label="How to read this page">
+      <article>
+        <h2>Snapshot, not live</h2>
+        <p>Each number was copied from a cited page on the date in that row. Platforms move. Do not treat two rows as a race unless their snapshot dates match.</p>
+      </article>
+      <article>
+        <h2>Open both links</h2>
+        <p>Profile is the account. Source is the page the figure was read from. Amber rows have a quirk. The full line-by-line log is in the verification doc.</p>
+      </article>
+      <article>
+        <h2>Organic is flagged, not proven</h2>
+        <p>Brand, celebrity, and platform-owner rows are marked. A large total is not proof the growth was organic, paid, or engineered.</p>
+      </article>
+    </section>
+
     <section class="toolbar" id="board">
       <label>
         Platform
         <select id="platform">
           <option value="all">All</option>
-          <option value="TikTok">TikTok</option>
-          <option value="Instagram">Instagram</option>
-          <option value="Facebook">Facebook</option>
-          <option value="Reddit">Reddit</option>
-          <option value="YouTube">YouTube</option>
-          <option value="X">X (Twitter)</option>
-          <option value="Twitch">Twitch</option>
         </select>
       </label>
       <label>
@@ -53,81 +66,128 @@
         </select>
       </label>
       <label>
-        Search
-        <input id="q" type="search" placeholder="Handle, owner, topic, country" />
+        Batch
+        <select id="batch">
+          <option value="all">All</option>
+        </select>
       </label>
+      <label class="grow">
+        Search
+        <input id="q" type="search" placeholder="Handle, owner, topic, country, note" />
+      </label>
+      <label class="check">
+        <input id="flagged-only" type="checkbox" />
+        Flagged only
+      </label>
+      <label class="check">
+        <input id="group-platform" type="checkbox" />
+        Group by platform
+      </label>
+      <button type="button" id="toggle-notes" class="text-btn">Show notes</button>
       <p class="count" id="count"></p>
-      <p class="note">The metric sort compares across platforms (followers, subscribers and members are different metrics) — each row states its own metric and snapshot date.</p>
     </section>
+    <p class="note">Metric sort mixes followers, subscribers and members. Group by platform before comparing. Amber rows are flagged; the full flag is in Notes and again under Flags. Each row names its own metric and snapshot.</p>
 
     <div class="table-wrap">
       <table>
+        <caption class="sr">Sourced social accounts. Open a row’s notes for the growth write-up and any second source.</caption>
         <thead>
           <tr>
-            <th>#</th>
-            <th>Platform</th>
-            <th>Handle</th>
-            <th>Owner</th>
-            <th>Topic</th>
-            <th>Cohort</th>
-            <th>Country</th>
-            <th><button id="sort-metric" class="sort" title="Sort by metric">Metric ⇅</button></th>
-            <th>Sources</th>
-            <th>Flags</th>
+            <th scope="col">#</th>
+            <th scope="col">Platform</th>
+            <th scope="col">Account</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Cohort</th>
+            <th scope="col"><button id="sort-metric" class="sort" type="button">Metric ⇅</button></th>
+            <th scope="col">Links</th>
+            <th scope="col">Flag</th>
           </tr>
         </thead>
         <tbody id="rows"></tbody>
       </table>
     </div>
 
+    <section id="clocks">
+      <h2>Cited clocks</h2>
+      <p class="note">Start dates that were printed on a fetched page. These are not a fastest-growth ranking. Rates are not computed where the source did not print one.</p>
+      <div id="clocks-list" class="cards"></div>
+    </section>
+
     <section id="strategies">
-      <h2>Growth strategies (documented, not guaranteed)</h2>
-      <p class="note">Official education hubs first. Observed patterns second. Buying engagement is out of scope and against platform rules.</p>
+      <h2>Growth strategies</h2>
+      <p class="note" id="strategy-disclaimer"></p>
+      <h3>Official guidance</h3>
       <div id="official" class="cards"></div>
-      <h3>Observed patterns from this list</h3>
+      <div id="tactics"></div>
+      <h3>Patterns read off this list</h3>
       <ul id="patterns"></ul>
       <h3>Topics with public demand</h3>
-      <ul id="topics"></ul>
+      <ul id="topics" class="topics"></ul>
+    </section>
+
+    <section id="engagement">
+      <h2>TikTok likes per follower</h2>
+      <p class="note">Approximate. Formula: (likes in billions × 1000) ÷ followers in millions. Both inputs are rounded figures from the cited TikTok table. This is cumulative likes, not a recent engagement rate.</p>
+      <div class="table-wrap">
+        <table>
+          <caption class="sr">TikTok rows sorted by approximate cumulative likes per follower.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Handle</th>
+              <th scope="col">Followers (M)</th>
+              <th scope="col">Likes (B)</th>
+              <th scope="col">Approx. likes / follower</th>
+              <th scope="col">Cohort</th>
+            </tr>
+          </thead>
+          <tbody id="likes-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="cohorts">
+      <h2>Cohort snapshot, by platform</h2>
+      <p class="note">Median of the stored snapshot values in this file. Display trims only floating-point noise, not the source figure. Not a growth rate. Not comparable across platforms, and not comparable across rows with different snapshot dates.</p>
+      <div class="table-wrap">
+        <table>
+          <caption class="sr">Count and median snapshot by platform and cohort.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Platform</th>
+              <th scope="col">Cohort</th>
+              <th scope="col">Rows</th>
+              <th scope="col">Median</th>
+              <th scope="col">Low</th>
+              <th scope="col">High</th>
+            </tr>
+          </thead>
+          <tbody id="cohort-rows"></tbody>
+        </table>
+      </div>
     </section>
 
     <section id="sources">
       <h2>Primary sources</h2>
-      <ul>
-        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts" rel="noopener">Wikipedia — most-followed TikTok accounts</a> (table as of 7 September 2026)</li>
-        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts" rel="noopener">Wikipedia — most-followed Instagram accounts</a> (table as of June 2026)</li>
-        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_Facebook_pages" rel="noopener">Wikipedia — most-followed Facebook pages</a> (table as of 28 August 2026)</li>
-        <li><a href="https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/" rel="noopener">Visual Capitalist — largest Reddit communities</a> (May 2025, data from Reddit)</li>
-        <li><a href="https://en.wikipedia.org/wiki/List_of_most-subscribed_YouTube_channels" rel="noopener">Wikipedia — most-subscribed YouTube channels</a> (top-100 table; MrBeast 517M dated September 2026)</li>
-        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_X_accounts" rel="noopener">Wikipedia — most-followed X accounts</a> (as of August 2026)</li>
-        <li><a href="https://en.wikipedia.org/wiki/List_of_most-followed_Twitch_channels" rel="noopener">Wikipedia — most-followed Twitch channels</a> (as of 2 August 2026)</li>
-        <li><a href="https://www.guinnessworldrecords.com/world-records/450698-most-followers-for-a-dog-on-instagram" rel="noopener">Guinness World Records — most followers on Instagram for a dog</a> (record verified 29 April 2019)</li>
-        <li><a href="https://www.guinnessworldrecords.com/world-records/465511-most-followers-for-a-cat-on-instagram" rel="noopener">Guinness World Records — most followers on Instagram for a cat</a> (record verified 13 May 2020)</li>
-        <li>Batch-3 niche rows also cite Wikipedia article infoboxes (updated per row): <a href="https://en.wikipedia.org/wiki/Markiplier" rel="noopener">Markiplier</a>, <a href="https://en.wikipedia.org/wiki/Nikkie_de_Jager" rel="noopener">Nikkie de Jager (NikkieTutorials)</a></li>
-        <li><a href="https://www.tiktok.com/creator-academy" rel="noopener">TikTok Creator Academy</a> (official education)</li>
-        <li><a href="https://creators.instagram.com/" rel="noopener">Instagram Creators</a> (official education)</li>
-      </ul>
+      <p class="note">Open these and check the row the leaderboard cites. Line-by-line log: <a href="https://github.com/buffedlizard55-lab/SocialMediaComp/blob/main/docs/VERIFICATION.md">docs/VERIFICATION.md</a>.</p>
+      <ul id="source-list"></ul>
     </section>
 
     <section id="flags">
-      <h2>Flags &amp; verification</h2>
-      <p class="note">
-        Every figure was checked line-by-line against the cited source table before being added.
-        Full per-entry log:
-        <a href="https://github.com/buffedlizard55-lab/SocialMediaComp/blob/main/docs/VERIFICATION.md" rel="noopener">docs/VERIFICATION.md</a>.
-        Flagged rows are highlighted below.
-      </p>
+      <h2>Flags for review</h2>
+      <p class="note">Anything odd found while reading the source is stored on the row. Nothing here was smoothed over.</p>
       <ul id="flag-summary"></ul>
     </section>
 
     <section id="limits">
       <h2>Limitations</h2>
       <ul id="meta-limits"></ul>
-      <p>Remaining work: <a href="https://github.com/buffedlizard55-lab/SocialMediaComp/blob/main/docs/NEXT_SESSION.md" rel="noopener">docs/NEXT_SESSION.md</a>.</p>
+      <p>What to do next: <a href="https://github.com/buffedlizard55-lab/SocialMediaComp/blob/main/docs/NEXT_SESSION.md">docs/NEXT_SESSION.md</a>.</p>
     </section>
   </main>
 
   <footer class="wrap">
-    <p>Batch 1 (entries 1–20) merged via PR #1; batch 2 (21–40) added 2026-09-20; batch 3 (41–60: YouTube, X, Twitch + pets/makeup/gaming niche rows) added 2026-09-21. No live scrape. Verify each official link before relying on a number.</p>
+    <p>Batches 1–3 are entries 1–60. Batch 4 (entries 61–80) was added 21 September 2026 from pages fetched that day. No live scrape. Verify each official link before relying on a number.</p>
+    <p><a href="https://buffedlizard55-lab.github.io/SocialMediaComp/">GitHub Pages</a> · <a href="https://github.com/buffedlizard55-lab/SocialMediaComp">Repository</a></p>
   </footer>
   <script src="assets/app.js"></script>
 </body>

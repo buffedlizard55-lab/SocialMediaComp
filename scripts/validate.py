@@ -4,13 +4,15 @@
 Checks (fail loudly, exit 1):
   - JSON parses; entries is a list
   - ids are contiguous 1..N
-  - added_batch matches id ranges (1-20 / 21-40 / 41-60)
+  - added_batch matches id ranges (1-20 / 21-40 / 41-60 / 61-80)
   - no duplicate (platform, handle) pairs
   - required fields present and non-empty on every entry
   - metric_value is a positive number
   - profile_url / source_url are https and point at plausible hosts for the platform
   - cohort is one of the documented values
-  - batch-3 entries carry verification_type; verification_type is a known value
+  - batch 3+ entries carry verification_type; verification_type is a known value
+  - optional article_url, if present, is https on a trusted host
+  - likes_billions, if present, is a positive number
 
 Run from repo root: python3 scripts/validate.py
 """
@@ -36,6 +38,7 @@ HOST_OK = {
     "X": ("x.com", "en.wikipedia.org"),
     "Twitch": ("twitch.tv", "en.wikipedia.org"),
 }
+ARTICLE_HOSTS = ("en.wikipedia.org", "guinnessworldrecords.com", "visualcapitalist.com", "support.google.com")
 
 
 def norm(host: str) -> str:
@@ -68,8 +71,19 @@ def main():
             errors.append(f"{ctx}: cohort '{e.get('cohort')}' not in {sorted(COHORTS)}")
         if e.get("country") is not None and not isinstance(e.get("country"), str):
             errors.append(f"{ctx}: country must be a string or null")
-        expected_batch = 1 if i <= 20 else 2 if i <= 40 else 3
-        if e.get("added_batch") != expected_batch:
+        if i <= 20:
+            expected_batch = 1
+        elif i <= 40:
+            expected_batch = 2
+        elif i <= 60:
+            expected_batch = 3
+        elif i <= 80:
+            expected_batch = 4
+        else:
+            expected_batch = None
+        if expected_batch is None:
+            errors.append(f"{ctx}: id {i} is past the last documented batch (80)")
+        elif e.get("added_batch") != expected_batch:
             errors.append(f"{ctx}: added_batch {e.get('added_batch')} != expected {expected_batch}")
         if e.get("verified_list") not in (True, False):
             errors.append(f"{ctx}: verified_list must be boolean")
@@ -86,9 +100,20 @@ def main():
         if pair in seen_pairs:
             errors.append(f"{ctx}: duplicate (platform, handle) with entry {seen_pairs[pair]}")
         seen_pairs[pair] = e.get("id")
-        if e.get("added_batch") == 3:
+        if (e.get("added_batch") or 0) >= 3:
             if e.get("verification_type") not in VERIFICATION_TYPES:
-                errors.append(f"{ctx}: batch-3 verification_type '{e.get('verification_type')}' not in {sorted(VERIFICATION_TYPES)}")
+                errors.append(f"{ctx}: verification_type '{e.get('verification_type')}' not in {sorted(VERIFICATION_TYPES)}")
+        article = e.get("article_url")
+        if article:
+            if not isinstance(article, str) or not article.startswith("https://"):
+                errors.append(f"{ctx}: article_url not https: {article}")
+            else:
+                ahost = norm(urlparse(article).netloc)
+                if ahost not in ARTICLE_HOSTS:
+                    errors.append(f"{ctx}: article_url host '{ahost}' not in {ARTICLE_HOSTS}")
+        likes = e.get("likes_billions")
+        if likes is not None and (not isinstance(likes, (int, float)) or likes <= 0):
+            errors.append(f"{ctx}: likes_billions must be a positive number when present")
 
     n_flagged = sum(1 for e in entries if e.get("irregularity"))
     print(f"entries: {len(entries)}  flagged: {n_flagged}")

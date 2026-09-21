@@ -35,6 +35,11 @@
       "name": "YouTube Creators",
       "url": "https://www.youtube.com/creators/",
       "why": "Official YouTube education/resources for channel growth."
+    },
+    {
+      "name": "YouTube Help — YouTube's Recommendation System",
+      "url": "https://support.google.com/youtube/answer/16533387?hl=en",
+      "why": "Official YouTube Help page, fetched 21 September 2026. Two stated goals: help each viewer find videos they want to watch, and maximize long-term satisfaction. Creator guidance on that page: recognizable titles and thumbnails, know the audience, publish time is not known to affect long-term viewership (except Premieres and live), use series/playlists/end screens, quality over upload volume, and judge each video on its own performance."
     }
   ],
   "observed_patterns": [
@@ -137,6 +142,81 @@
       "pattern": "Regional-language volume publishing",
       "example": "T-Series 315M and SET India 190M (Hindi); 28 of YouTube's top 100 are primarily Hindi",
       "note": "High-frequency label/network output aimed at India-scale audiences; same mechanics as batch-1's non-English TikTok creators, applied by studios."
+    },
+    {
+      "pattern": "A recent join date on a top-100 YouTube row is a clock, not a rate",
+      "example": "UR · Cristiano joined 8 July 2024 and the table shows 83.3 million subscribers",
+      "note": "Strongest dated start in the YouTube rows read this session. It is celebrity transfer (same person as entries 11 and 51), not from-zero organic growth. No daily rate was computed because the list page mixes June 2026 and September 2026 sentences (Q10)."
+    },
+    {
+      "pattern": "Shorts plus a recognizable series",
+      "example": "Alan's Universe joined YouTube 3 February 2020; list shows 102 million; article infobox matches and calls it the highest-ranking Shorts channel",
+      "note": "Article describes a scripted high-school series (Alan's Universe) with over 1 billion views. Packaging is a series, not one-off trend clips."
+    },
+    {
+      "pattern": "Dubbing plus Shorts coincided with a documented spike",
+      "example": "Stokes Twins article: daily views from about 3–5 million to about 50 million in 2024; passed 100 million subscribers that November; list now shows 146 million",
+      "note": "Article also says videos are dubbed into eight languages. List/infobox disagree by 2 million (Q20). A 2021 monetization suspension is on the same article — growth was not a straight line."
+    },
+    {
+      "pattern": "From-zero short comedy, dated account creation",
+      "example": "KallMeKris registered TikTok on 9 April 2020; list rank 42 shows 50.3 million followers and 2.5 billion likes as of 7 September 2026",
+      "note": "Article says the skits run about 30 seconds to a minute. Table still describes her as a hairdresser; the article says she left that job in April 2020 (Q27)."
+    },
+    {
+      "pattern": "A skill that does not need language",
+      "example": "Spencer X, beatboxing: TikTok created February 2019, ten million by that fall (article); list rank 37 shows 53.5 million and 1.3 billion likes",
+      "note": "Same language-free mechanic as silent comedy and cooking, applied to sound. Street-performer background is in the article, not inferred."
+    },
+    {
+      "pattern": "Livestreams as the growth surface, including non-English",
+      "example": "Younes Zarou: first TikTok video 22 August 2019; 2020 livestreams over 240,000 viewers (article); list rank 27 shows 57.6 million and 1.3 billion likes",
+      "note": "Article does not name a more specific editing format. Country flags on the list are Morocco and Germany; the biography states birth in Frankfurt only (Q19)."
+    },
+    {
+      "pattern": "Event-style streams lead Twitch; a specialist can still be top 15",
+      "example": "Kai Cenat 21.4 million (rank 1) and Ibai 20.4 million (rank 2), both 'special events'; Jynxzi rank 12 at 11.2 million with only Clash Royale and Rainbow Six Siege listed",
+      "note": "Table as of 2 August 2026. Page lead says Kai Cenat was first to 20 million followers. Spanish-language event streaming (Ibai) matches the English event row, so the format is not language-locked."
+    },
+    {
+      "pattern": "Science explainers reach the YouTube top 100 without a celebrity head start",
+      "example": "Mark Rober, 82.6 million, category Education/Entertainment, joined 20 October 2011",
+      "note": "Article: NASA engineer; first video received 1.5 million views in one day. Infobox is 81.9 million (Q21). List value used."
+    },
+    {
+      "pattern": "Regional-language family Shorts",
+      "example": "KL BRO Biju Rithvik, 88.7 million, Malayalam lifestyle vlogs, joined 21 July 2020",
+      "note": "Family channel; children appear (flagged). Figure is the list value, not the December 2025 infobox."
+    },
+    {
+      "pattern": "Highest derived likes-per-follower in the TikTok top 50 read this session is a media brand",
+      "example": "Barstool Sports, rank 44: 49.6 million followers and 10.5 billion likes",
+      "note": "Brand-account column is Yes. Charli D'Amelio (entry 2) has the higher likes total on the same table (12.3 billion). Dividing the rounded figures puts Barstool higher per follower (about 212 vs about 77). That ratio is not a published rate and is not a recent engagement rate. Do not copy the brand's volume model as a from-zero plan."
+    },
+    {
+      "pattern": "Let's Play longevity, below the top-100 floor",
+      "example": "jacksepticeye: uploading since December 2012, 1 million in 2014, 10 million by 2016, infobox 31.2 million (8 September 2026)",
+      "note": "The YouTube list page says all top-100 channels have passed 50 million, so this niche row cannot come from that table. Infobox used and flagged."
+    },
+    {
+      "pattern": "Platform switching is a real growth decision, with a smaller number on the old platform",
+      "example": "Valkyrae left Twitch for a YouTube exclusive contract on 13 January 2020; infobox shows YouTube 4.05 million and Twitch 1.6 million (4 July 2026)",
+      "note": "Not in the Twitch top-50 table read this session. Included because the article dates the switch. Do not treat 4.05 million as comparable to 21.4 million Twitch leaders."
+    },
+    {
+      "pattern": "Makeup growth on the cited page is a cosmetics company, not only tutorials",
+      "example": "jeffreestar, 15.6 million YouTube subscribers, infobox updated 23 April 2026; Jeffree Star Cosmetics founded November 2014",
+      "note": "Huda Kattan's article documents a WordPress makeup blog (April 2010) and a cosmetics line (2013) but prints no follower figure, so she is not a row. NikkieTutorials remains entry 58."
+    },
+    {
+      "pattern": "A trainable unusual pet behavior can set a record without reaching top-50 scale",
+      "example": "Merlin the pig, 1,100,000 Instagram followers (Guinness), button communication",
+      "note": "Record dates conflict (1 December 2025 vs 23 February 2026 prose). Same pet-ceiling point as Jiffpom and Nala, with a 2025/2026 record instead of a 2019/2020 one. Still not comparable to celebrity accounts."
+    },
+    {
+      "pattern": "One-line communities and space communities are large, and old",
+      "example": "r/Showerthoughts 34 million (rank 10) and r/space 28 million (rank 15), May 2025",
+      "note": "Same Visual Capitalist snapshot as the existing Reddit rows. r/Showerthoughts ties r/science at 34 million. Not evidence of 2026 growth."
     }
   ],
   "topics_with_public_demand": [
@@ -161,6 +241,85 @@
     "Makeup / beauty tutorials (NikkieTutorials)",
     "Politics / public figures on X (Obama, Trump, Modi)",
     "Space / science communication (NASA on X)",
-    "Regional-language music and TV volume publishing (T-Series, SET India)"
+    "Regional-language music and TV volume publishing (T-Series, SET India)",
+    "Beatboxing / skill audio that does not need language (Spencer X)",
+    "Short scripted comedy from a dated zero start (KallMeKris, April 2020)",
+    "YouTube Shorts series (Alan's Universe; Stokes Twins dubbing + Shorts)",
+    "Science and DIY explainers (Mark Rober; r/space)",
+    "Family Shorts in a regional language (KL BRO, Malayalam)",
+    "Event livestreams in more than one language (Kai Cenat, Ibai)",
+    "Specialist game channels (Jynxzi; jacksepticeye Let's Plays)",
+    "Makeup as tutorials and as a cosmetics company (NikkieTutorials, Jeffree Star; Huda Kattan documented without a follower figure)",
+    "Unusual pet skills (Merlin the pig, Guinness 2025/2026 record)",
+    "Basketball, separate from football and cricket (LeBron James on Instagram — celebrity, not a from-zero plan)",
+    "One-line observation communities (r/Showerthoughts)",
+    "Sports-media likes density (Barstool Sports on TikTok — brand account)"
+  ],
+  "official_tactics": [
+    {
+      "source_name": "YouTube Help — YouTube's Recommendation System",
+      "source_url": "https://support.google.com/youtube/answer/16533387?hl=en",
+      "fetched": "2026-09-21",
+      "points": [
+        "The page says recommendations are driven by what viewers watch and enjoy, not by a separate thing creators should try to game.",
+        "Two goals are stated: help each viewer find videos they want to watch, and maximize long-term viewer satisfaction.",
+        "Signals named on the page include watch history, how much of a video is watched, ignores and 'not interested', search, subscriptions, likes, shares, comments, survey responses, and language.",
+        "A consistent title and thumbnail style is described as making videos easier to choose.",
+        "Publish time is not known to affect long-term viewership. The page says publishing when the audience is active may bring more immediate views, but no evidence was observed for a long-term effect. Premieres and live streams are the exception: use the audience's active times.",
+        "Series, clear next-video prompts, playlists, and end screens are listed as ways to help continued viewing.",
+        "Quality over upload frequency. The page says the system does not penalize breaks, and that often posting videos that do not resonate can hurt over time.",
+        "Each video is scored on fresh performance. One experiment that misses does not, by itself, block the channel. Repeated misses can."
+      ]
+    }
+  ],
+  "cited_clocks": [
+    {
+      "account": "YouTube UR · Cristiano",
+      "clock": "Joined YouTube 8 July 2024; top-100 table shows 83.3 million subscribers",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-subscribed_YouTube_channels",
+      "caveat": "Celebrity transfer (entries 11 and 51). List page mixes June 2026 and September 2026 dates (Q10). Not a computed daily rate."
+    },
+    {
+      "account": "YouTube Alan's Universe (@AlanChikinChow)",
+      "clock": "Joined 3 February 2020; list shows 102 million, matching the 18 September 2026 infobox",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-subscribed_YouTube_channels",
+      "caveat": "Join date is a table column. No daily rate computed."
+    },
+    {
+      "account": "YouTube KL BRO Biju Rithvik",
+      "clock": "Joined 21 July 2020; list shows 88.7 million",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_most-subscribed_YouTube_channels",
+      "caveat": "Family vlog. Infobox (84.7 million, 10 December 2025) was not used."
+    },
+    {
+      "account": "YouTube Stokes Twins",
+      "clock": "Article: joint channel 11 March 2017; passed 100 million in November 2024; list now shows 146 million",
+      "source_url": "https://en.wikipedia.org/wiki/Stokes_Twins",
+      "caveat": "List join date is 11 April 2008, which is not the joint-channel date (Q20). 2021 monetization suspension is on the same article."
+    },
+    {
+      "account": "TikTok @kallmekris",
+      "clock": "Account registered 9 April 2020; list shows 50.3 million and 2.5 billion likes as of 7 September 2026",
+      "source_url": "https://en.wikipedia.org/wiki/KallMeKris",
+      "caveat": "Article says 40th; table rank read this session is 42."
+    },
+    {
+      "account": "TikTok @spencerx",
+      "clock": "TikTok created February 2019; ten million by that fall (article); list shows 53.5 million as of 7 September 2026",
+      "source_url": "https://en.wikipedia.org/wiki/Spencer_X",
+      "caveat": "The ten-million milestone is from the article, not the list table."
+    },
+    {
+      "account": "TikTok @youneszarou",
+      "clock": "First video 22 August 2019; list shows 57.6 million as of 7 September 2026",
+      "source_url": "https://en.wikipedia.org/wiki/Younes_Zarou",
+      "caveat": "YouTube infobox (27.5 million subscribers, 23 billion views, 9 July 2026) is a different platform and is not this row's metric."
+    },
+    {
+      "account": "YouTube jacksepticeye",
+      "clock": "Uploading since December 2012; 1 million in 2014; 10 million by 2016; infobox 31.2 million updated 8 September 2026",
+      "source_url": "https://en.wikipedia.org/wiki/Jacksepticeye",
+      "caveat": "Infobox, not the top-100 list. Milestones are years, not exact dates."
+    }
   ]
 }

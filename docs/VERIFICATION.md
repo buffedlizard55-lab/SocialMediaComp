@@ -198,3 +198,209 @@ and the Visual Capitalist Reddit table before PR #1 was merged. See the git hist
   caption: "Barbadian singer" Rihanna), or from the same person's existing row (Ronaldo,
   per entry 11). @elonmusk's country is left empty rather than guessed.
 
+---
+
+# Batch 4 (2026-09-21) — entries 61–80
+
+## Method (batch 4, 2026-09-21)
+
+1. Twenty new rows were planned around the project's gaps: organic or unusual growth,
+   pets, gaming, makeup, and topics the top-celebrity lists do not cover. A row was
+   written only after the specific table cell, infobox line, or record block was read
+   from a page fetched in this session.
+2. Wikipedia list tables were fetched in chunks and the row was read before the JSON
+   was written. Article infoboxes were used only when the account is below the list
+   floor (YouTube top 100 is stated to be above 50 million) or when the list does not
+   cover the niche. Those rows are `verified_list: false` and flagged.
+3. Handles and profile URLs were copied from the link on the cited page. Where a second
+   page was read (a Wikipedia article, or the Guinness news post), its URL is stored as
+   `article_url` and linked in the UI. It is not a substitute for `source_url`.
+4. Duplicate check: `scripts/build_batch4.py` refuses a `(platform, handle)` already
+   in entries 1–60, assigns ids 61–80, and re-reads the file after writing to confirm
+   the locked figures. `scripts/validate.py` checks contiguity, hosts, cohorts,
+   verification types, optional article URLs, and likes figures.
+   Two prose corrections were applied after that write, without changing any
+   metric: entry 75's country string was ordered Morocco then Germany (Q19), and
+   entry 76's notes no longer call 10.5 billion likes the highest total (Q26).
+   `data/snapshots/2026-09-21-master-list.json` is a copy of the corrected file,
+   not a second scrape.
+5. No follower number was estimated, rounded by us, or taken from a blog, Social Blade
+   page, or search snippet of a non-official site. Search-indexed text was used only
+   for the Guinness record page, which served a cookie wall (same method as Q13), and
+   that row is flagged.
+6. TikTok Creator Academy (`https://www.tiktok.com/creator-academy`) returned HTTP 403
+   from the fetch tool. No new TikTok "official tactic" was written. YouTube's Help
+   page on recommendations was fetched in full and is the only new official-tactics source.
+
+## Sources fetched this session (2026-09-21)
+
+| Source | URL | What was read |
+| --- | --- | --- |
+| Wikipedia — most-followed TikTok accounts | https://en.wikipedia.org/wiki/List_of_most-followed_TikTok_accounts | Top-50 table, as of 7 September 2026. Followers rounded down to the nearest 0.1 million (page note). |
+| Wikipedia — most-subscribed YouTube channels | https://en.wikipedia.org/wiki/List_of_most-subscribed_YouTube_channels | Top-100 table. No rank column. Lead says MrBeast 517 million as of September 2026; a stale sentence still says 500 million as of 12 June 2026 (Q10, reconfirmed). |
+| Wikipedia — most-followed Twitch channels | https://en.wikipedia.org/wiki/List_of_most-followed_Twitch_channels | Table as of 2 August 2026. Ranks 1–15 read. |
+| Wikipedia — most-followed Instagram accounts | https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts | Lead: as of June 2026. No rank column. @kingjames row read from the table. |
+| Wikipedia — most-followed Facebook pages | https://en.wikipedia.org/wiki/List_of_most-followed_Facebook_pages | Table as of 28 August 2026, ranks 1–15 read. No new Facebook row added (see Q32). |
+| Visual Capitalist — largest Reddit communities | https://www.visualcapitalist.com/ranked-largest-communities-on-reddit/ | Full 15-row table, May 2025. Data attributed to Reddit. |
+| Wikipedia — Stokes Twins | https://en.wikipedia.org/wiki/Stokes_Twins | Infobox updated 9 August 2026; career section. |
+| Wikipedia — Alan Chikin Chow | https://en.wikipedia.org/wiki/Alan_Chikin_Chow | Infobox updated 18 September 2026; lead and career. |
+| Wikipedia — Mark Rober | https://en.wikipedia.org/wiki/Mark_Rober | Infobox updated 4 September 2026; lead and career open. |
+| Wikipedia — KL Bro Biju | https://en.wikipedia.org/wiki/KL_Bro_Biju | Infobox updated 10 December 2025; lead. |
+| Wikipedia — jacksepticeye | https://en.wikipedia.org/wiki/Jacksepticeye | Infobox updated 8 September 2026; lead. |
+| Wikipedia — Valkyrae | https://en.wikipedia.org/wiki/Valkyrae | Infobox updated 4 July 2026; lead and 2015–2020 career section. |
+| Wikipedia — Jeffree Star | https://en.wikipedia.org/wiki/Jeffree_Star | Infobox updated 23 April 2026; lead. |
+| Wikipedia — KallMeKris | https://en.wikipedia.org/wiki/KallMeKris | Infobox updated 1 September 2026; lead and 2020 start. |
+| Wikipedia — IShowSpeed | https://en.wikipedia.org/wiki/IShowSpeed | Infobox updated 19 September 2026; lead. |
+| Wikipedia — Spencer X | https://en.wikipedia.org/wiki/Spencer_X | Infobox updated 24 July 2026; lead and career. |
+| Wikipedia — Younes Zarou | https://en.wikipedia.org/wiki/Younes_Zarou | Infobox updated 9 July 2026; full short article. |
+| Wikipedia — Doug the Pug | https://en.wikipedia.org/wiki/Doug_the_Pug | Lead read. Not added (Q31). |
+| Wikipedia — Huda Kattan | https://en.wikipedia.org/wiki/Huda_Kattan | Lead and career open. No follower figure. Not added (Q31). |
+| Guinness record — most Instagram followers for a pig | https://www.guinnessworldrecords.com/world-records/465669-most-followers-for-a-pig-on-instagram | Cookie wall on direct fetch. Who/What/When/Where read from search-indexed text of this URL (Q16). |
+| Guinness news — Merlin | https://www.guinnessworldrecords.com/news/2026/3/meet-merlin-the-adorable-mini-pig-who-amassed-a-following-by-talking-with-buttons | Fetched in full. Confirms @merlinthepig, 1.1 million, button communication, Mina Alali. |
+| YouTube Help — recommendation system | https://support.google.com/youtube/answer/16533387?hl=en | Fetched in full. Official tactics only. Not a follower source. |
+
+## Batch 4 entries, verified line by line
+
+| # | Platform | Handle | Figure read | Source row | Status |
+| --- | --- | --- | --- | --- | --- |
+| 61 | Twitch | KaiCenat | 21.4 million, rank 1 | Twitch table: special events, various games, chatting; English; United States; link `twitch.tv/KaiCenat` | ✅ table value. Lead also says first to 20 million. Stale September 2025 sentence ignored (Q25). |
+| 62 | Twitch | Ibai | 20.4 million, rank 2 | Twitch table: Ibai Llanos; special events, various games, chatting; Spanish; Spain; link `twitch.tv/ibai` | ✅ No event names added; the table does not name them. |
+| 63 | Twitch | Jynxzi | 11.2 million, rank 12 | Twitch table: Nicholas Stewart; Clash Royale and Rainbow Six Siege; English; United States; link `twitch.tv/jynxzi` (no www) | ✅ No start date on the row, so none stored. |
+| 64 | YouTube | Stokes Twins | 146 million | YouTube table: English, category People, joined 11 April 2008, United States and China, link `youtube.com/@stokestwins` | ✅ List value. Article infobox 144 million (9 Aug 2026) not used (Q20). |
+| 65 | YouTube | Alan's Universe | 102 million | YouTube table: link `youtube.com/@AlanChikinChow`, Entertainment, joined 3 February 2020, United States | ✅ Infobox on the article also says 102 million, updated 18 September 2026. |
+| 66 | YouTube | Mark Rober | 82.6 million | YouTube table: Education/Entertainment, joined 20 October 2011, United States, channel `UCY1kMZp36IQSyNx_9h4mpCg` | ✅ List value. Infobox 81.9 million (4 Sep 2026) not used (Q21). |
+| 67 | YouTube | KL BRO Biju Rithvik | 88.7 million | YouTube table: Malayalam, Lifestyle Vlogs, joined 21 July 2020, India, link `youtube.com/@KLBROBijuRithvik1` | ✅ List value. Infobox 84.7 million (10 Dec 2025) not used (Q22). |
+| 68 | YouTube | UR · Cristiano | 83.3 million | YouTube table: Portuguese and English, Entertainment/Sports, joined 8 July 2024, Portugal, link `youtube.com/@cristiano` | ✅ Flagged celebrity duplicate of entries 11 and 51 (Q24). No rate computed. |
+| 69 | YouTube | jacksepticeye | 31.2 million | Article infobox, updated 8 September 2026; channel `youtube.com/@jacksepticeye`; views 17.73 billion on the same infobox | ✅ Not a top-100 row (Q23). Lead: uploading since December 2012, 1 million in 2014, 10 million by 2016. |
+| 70 | YouTube | Valkyrae | 4.05 million subscribers | Article infobox, updated 4 July 2026; channel `youtube.com/@Valkyrae`; views 969.91 million. Same infobox: Twitch 1.6 million | ✅ YouTube figure is the row. Twitch figure is a note, not a second entry (Q23, Q25). |
+| 71 | YouTube | jeffreestar | 15.6 million | Article infobox, updated 23 April 2026; channel `youtube.com/@jeffreestar`; views 2.61 billion; genres vlog, makeup, beauty | ✅ Older infobox than the other batch-4 articles (Q23). Cosmetics company founded November 2014, per the lead. |
+| 72 | TikTok | @kallmekris | 50.3 million, 2.5 billion likes, rank 42 | TikTok table: Kristina Collins; Canada; description on the table is "social media personality and hairdresser" | ✅ Figure matches the article (50.3 million as of September 2026). Topic uses the article (comedy skits), not the stale table job title (Q27). Article says 40th; table rank is 42 (Q18). Account registered 9 April 2020, per the article. |
+| 73 | TikTok | @ishowspeed | 54.3 million, 0.43 billion likes, rank 32 | TikTok table: United States; description social media personality, rapper, and streamer; link `tiktok.com/@ishowspeed` | ✅ List value kept so likes stay on the same row. Infobox 54.6 million (19 Sep 2026) not used (Q18). Rank sits above a 54.5 million row (Q17). |
+| 74 | TikTok | @spencerx | 53.5 million, 1.3 billion likes, rank 37 | TikTok table: Spencer X; beatboxer and social media personality; United States | ✅ List value. Article: TikTok created February 2019, ten million by that fall. Infobox 53.6 million (24 July 2026) not used (Q18). |
+| 75 | TikTok | @youneszarou | 57.6 million, 1.3 billion likes, rank 27 | TikTok table: social media personality; Morocco and Germany flags; link `tiktok.com/@youneszarou` | ✅ List value. Article infobox 57.4 million (9 July 2026) not used. Country caveat Q19. |
+| 76 | TikTok | @barstoolsports | 49.6 million, 10.5 billion likes, rank 44 | TikTok table: brand-account column Yes; "blog website and digital media company"; United States | ✅ Second-highest likes total read (Charli D'Amelio, entry 2, is 12.3 billion). Highest derived likes-per-follower. Brand flag (Q26). |
+| 77 | Instagram | @merlinthepig | 1,100,000 followers | GWR record data: Who merlinthepig; What 1,100,000; Where United States (Sacramento); When 1 December 2025 | ✅ Flagged. Prose on the same indexed record says as of 23 February 2026. News page fetched in full confirms the handle and 1.1 million (Q16). |
+| 78 | Instagram | @kingjames | 154 million | Instagram table, as of June 2026: LeBron James, basketball player, United States, link `instagram.com/kingjames` | ✅ Celebrity topic-gap row, not an organic case (Q30). Table has no rank column; none stored. |
+| 79 | Reddit | r/Showerthoughts | 34 million, rank 10 | Visual Capitalist table, May 2025 | ✅ Ties r/science (entry 40) on the same table. Handle spelling copied from the table. |
+| 80 | Reddit | r/space | 28 million, rank 15 | Visual Capitalist table, May 2025 | ✅ Last row of that 15-row chart. |
+
+## Read, and deliberately not added
+
+These figures were on pages fetched this session. They are not in `master-list.json`.
+
+| Candidate | Figure read | Why it is not a row |
+| --- | --- | --- |
+| TikTok @espn | Rank 22, 61 million followers, 6.2 billion likes, brand column Yes, United States | Sports-media brand. Not added. 6.2 billion likes is below both Barstool (10.5 billion, entry 76) and Charli D'Amelio (12.3 billion, entry 2). |
+| TikTok @therock, @willsmith | 79.7 million / 0.68 billion likes; 77.9 million / 0.66 billion likes | Same people as entries 14 and 35. Not added, to avoid another celebrity duplicate. |
+| TikTok @realmadrid, @fcbarcelona | 77.1 million / 2.3 billion likes; 72.5 million / 3.1 billion likes; both brand | Club accounts. Sports topic is already covered. |
+| TikTok rank 25, Champions League | Row was split across a fetch chunk: 59.2 million, 2.7 billion likes, country cell empty in the text read | Incomplete read of the country cell. Not added. |
+| Pokimane | Lead sentence: 9.4 million, "as of September 2025", citing Social Blade | Not in the 2 August 2026 table rows that were read (through rank 15). The 9.4 million sentence is stale next to Kai Cenat's table value of 21.4 million (Q25). |
+| Doug the Pug | Article lead: Instagram 3.9 million, and Twitter "over 2.6 million" in a sentence ending "as of 2021" | No profile slug on the page. A handle was not guessed (Q31). |
+| Huda Kattan | Article documents a WordPress blog started April 2010 and Huda Beauty founded 2013 | No follower or subscriber figure on the article. Not invented (Q31). |
+| James Charles | Article infobox was visible in search and the page was not used | Not added. The article is a dispute record, not a clean growth case. No controversy details are repeated here. |
+| Facebook Samsung, Facebook's own page, Real Madrid C.F. | Table: 162 million, 154 million, 135 million, as of 28 August 2026 | Brand or already-famous pages. Table links to Wikipedia articles, not `facebook.com` slugs. No slug was guessed (Q32). |
+
+## Irregularities and quirks flagged this session (batch 4)
+
+- **Q16 — Merlin record date conflict and cookie wall.** Direct fetch of
+  `guinnessworldrecords.com/world-records/465669-most-followers-for-a-pig-on-instagram`
+  returned a cookie-consent wall, same class of failure as Q13. The record data block
+  was read from search-indexed text of that official URL: Who merlinthepig; What
+  1,100,000 follower(s); Where United States (Sacramento); When 1 December 2025.
+  The same indexed prose says the 1.1 million was "as of 23 February 2026". Both
+  dates are stored. The news page
+  `guinnessworldrecords.com/news/2026/3/meet-merlin-the-adorable-mini-pig-who-amassed-a-following-by-talking-with-buttons`
+  was fetched in full and confirms @merlinthepig, 1.1 million followers, Mina Alali
+  (USA), and button communication. `instagram.com` was not opened. Live count will differ.
+- **Q17 — TikTok table is not strictly sorted.** On the 7 September 2026 table, rank 32
+  (@ishowspeed, 54.3 million) is listed before rank 33 (@bayashi.tiktok, 54.5 million).
+  Rank 50 (@laliga, 46.6 million) is listed after rank 49 (@nianaguerrero, 46.5 million).
+  Same class of quirk as Q2. Figures used as published. Ranks are not used as a sort key
+  in the app.
+- **Q18 — List figure vs article infobox, where both were read.** List value is the
+  metric when the row also has a likes figure, so both numbers come from one row.
+  - @ishowspeed: list 54.3 million (7 September 2026) vs infobox 54.6 million (19 September 2026).
+  - @spencerx: list 53.5 million (7 September 2026, rounded down to 0.1 million) vs infobox 53.6 million (24 July 2026).
+  - @youneszarou: list 57.6 million vs infobox 57.4 million (9 July 2026). The article calls him 26th via a Social Blade citation retrieved 9 July 2026; the list rank read here is 27.
+  - @kallmekris: both say 50.3 million, but the article says "40th overall" and the table rank is 42.
+- **Q19 — Younes Zarou country.** The TikTok table shows Morocco and Germany flags.
+  The biography article says he was born in Frankfurt on 26 January 1998 and, in the
+  sections fetched, does not state Moroccan nationality. Country on the row follows
+  the list order: Morocco, then Germany. Manual review of the table's country
+  citations is recommended.
+- **Q20 — Stokes Twins, three disagreements on pages that were both fetched.**
+  List: 146 million, joined YouTube 11 April 2008. Article infobox (9 August 2026):
+  144 million main channel, years active 2008–present. Article body: joint channel
+  created 11 March 2017. List subscriber figure is used. The article also states
+  YouTube suspended monetization for six months in 2021 after a prank that resulted
+  in misdemeanor charges, at which time the channel had about 4.8 million followers.
+  That interruption is a flag, not a reason to drop the row. TikTok 30.9 million and
+  Instagram 4.9 million appear on the infobox without profile URLs, so those platforms
+  were not added.
+- **Q21 — Mark Rober list vs infobox.** List 82.6 million. Infobox 81.9 million,
+  18.7 billion views, updated 4 September 2026. List value used. The 1.5 million views
+  in one day is the article's description of the October 2011 first video, not a
+  current rate.
+- **Q22 — KL BRO.** List 88.7 million. Article infobox 84.7 million, updated
+  10 December 2025 (stale relative to the list). List value used. The article says
+  the channel is family lifestyle vlogs and that he has children; the row is flagged
+  for that. The article's claim that he is the most-subscribed individual YouTuber in
+  Asia was not checked against the full top-100 table and is not used.
+- **Q23 — Infobox rows are not list rows.** jacksepticeye (31.2 million, 8 September
+  2026), Valkyrae (4.05 million, 4 July 2026) and jeffreestar (15.6 million, 23 April
+  2026) are below the YouTube list page's statement that every top-100 channel has
+  passed 50 million. They are flagged `verified_list: false`. Do not rank them against
+  the top-100 table as if the snapshots were the same age. Jeffree Star's infobox is
+  the oldest of the three.
+- **Q24 — UR · Cristiano is a third row for Cristiano Ronaldo** (entries 11 and 51).
+  Included only because the YouTube table prints a join date of 8 July 2024 next to
+  83.3 million subscribers. No daily rate was computed. The list page still mixes a
+  June 2026 "500 million" sentence with a September 2026 "517 million" sentence (Q10).
+  This row is not evidence of from-zero organic growth.
+- **Q25 — Twitch lead is stale relative to its own table.** The lead says, as of
+  September 2025, Kai Cenat has 20 million and Pokimane has 9.4 million. The table,
+  as of 2 August 2026, says Kai Cenat has 21.4 million. Pokimane was not in the table
+  rows read (ranks 1–15). She was not added. Valkyrae's 1.6 million Twitch followers
+  are from her article infobox (4 July 2026), not from that table.
+- **Q26 — Barstool Sports is a brand.** Brand-account column on the TikTok table is
+  Yes. 10.5 billion likes is not the highest likes total on that table. Charli
+  D'Amelio (entry 2) is 12.3 billion, re-read from the same table this session.
+  Dividing rounded likes by rounded followers puts Barstool first among the top-50
+  rows read (about 212 per follower, versus about 77 for Charli). That ratio is
+  arithmetic in the UI. It is not a published rate. An earlier draft of this note
+  called 10.5 billion the highest likes total. That was wrong and was corrected
+  before the rows were treated as final.
+- **Q27 — KallMeKris table job title is stale.** The table says "social media
+  personality and hairdresser". The article says she left hairdressing in April 2020,
+  registered the account on 9 April 2020, and is known for short comedy skits. Topic
+  on the row follows the article. Follower and likes figures follow the table.
+- **Q28 — IShowSpeed other-platform infobox figures are notes, not rows.** Updated
+  19 September 2026: YouTube 61.4 million subscribers and 10.9 billion views;
+  Instagram 55.3 million (`instagram.com/ishowspeed`); Twitch 6.2 million; X 4.1
+  million at `@ishowspeedsui` (not `@ishowspeed`). Adding them would duplicate the
+  person. The TikTok list row is the entry because it also has likes.
+- **Q29 — New Reddit rows use the May 2025 Visual Capitalist snapshot.** Same age
+  limit as Q7. r/Showerthoughts at 34 million ties entry 40 (r/science).
+- **Q30 — @kingjames is pre-existing fame.** 154 million, basketball player, United
+  States, Instagram list as of June 2026. Added for the basketball topic gap only.
+- **Q31 — Reviewed and not added, rather than guessed.** Doug the Pug: the article
+  states 3.9 million Instagram followers in a sentence that ends "as of 2021" and
+  does not print a profile slug. Huda Kattan: blog (April 2010) and cosmetics line
+  (2013) are documented; no follower figure is printed. James Charles was not used
+  as a growth case.
+- **Q32 — Facebook table re-read; no new Facebook row.** As of 28 August 2026 the
+  table still lists Shakira at 126 million (rank 8) before FC Barcelona at 128 million
+  (rank 9), which is Q2. A caption says Facebook's own page is third with 155 million;
+  the table shows Samsung at rank 3 with 162 million and Facebook at rank 4 with 154
+  million. The Ronaldo caption still says 177 million against the table's 174 million
+  (Q3). New top pages read (Samsung 162, Real Madrid 135, Coca-Cola 107) are brands.
+  The table does not link to `facebook.com`, so no slug was invented.
+
+## Official strategy source (not a follower source)
+
+YouTube Help, "YouTube's Recommendation System",
+https://support.google.com/youtube/answer/16533387?hl=en , fetched in full on
+2026-09-21. The tactics on the site are paraphrases of that page, with the link.
+TikTok Creator Academy was not re-fetched (HTTP 403). Older official URLs already
+in `data/strategies.json` were not re-verified this session and are unchanged.
+

@@ -4,34 +4,34 @@ Competition-style leaderboard of high-reach social accounts and communities
 (TikTok, Instagram, Facebook, Reddit, YouTube, X, Twitch), with **cited sources for
 every row** and a line-by-line verification log.
 
-Live site (GitHub Pages, enabled): `https://buffedlizard55-lab.github.io/SocialMediaComp/`
+Live site (GitHub Pages): `https://buffedlizard55-lab.github.io/SocialMediaComp/`
 
 ## What this is
 
-- **60 entries** in `data/master-list.json`
+- **80 entries** in `data/master-list.json`
   - Batch 1 (1–20): TikTok, Instagram, Reddit — merged via PR #1
-  - Batch 2 (21–40): adds **Facebook** coverage plus food, K-pop, magic, cricket,
-    photography, DIY and education topics — merged via PR #2
-  - Batch 3 (41–60): adds **YouTube, X and Twitch** coverage plus pets, makeup and
-    gaming niche entries (Wikipedia list tables, article infoboxes, Guinness World
-    Records) — see PR for this session
-- Cohort labels (`creator` / `celebrity` / `brand` / `community`) and countries on every row
-- Official education links + observed growth patterns in `data/strategies.json`
-- Per-entry verification log: `docs/VERIFICATION.md` (quirk register Q1–Q15)
-- Static GitHub Pages UI: `index.html` (filter by platform/cohort, search, sortable metric)
-- Structural data checks: `python3 scripts/validate.py`
+  - Batch 2 (21–40): Facebook, plus food, K-pop, cricket, photography, DIY — PR #2
+  - Batch 3 (41–60): YouTube, X, Twitch, plus pet / makeup / gaming niche rows — PR #3
+  - Batch 4 (61–80): organic and unusual growth cases (Shorts, science, beatbox,
+    event streams, a Guinness pig record, dated creator clocks) — this session
+- Cohort, country, and a flag on every irregular row
+- Official education links and observed patterns in `data/strategies.json`
+- Verification log: `docs/VERIFICATION.md` (Q1–Q32)
+- Static site: `index.html` (filter, search, notes, clocks, likes density, cohort medians)
+- Checks: `python3 scripts/validate.py`
+- Snapshot of the file as written on 21 September 2026: `data/snapshots/2026-09-21-master-list.json`
 
 ## What this is not
 
-- Not live follower counts (every figure is a dated snapshot from its cited source)
-- Not proof of organic vs paid or platform-engineered growth (flagged rows exist)
-- Not a how-to for buying engagement (against platform rules and out of scope)
+- Not live follower counts. Every figure is a dated snapshot from its cited source.
+- Not proof of organic versus paid or platform-engineered growth. Flagged rows exist.
+- Not a guide to buying engagement. That is against platform rules and out of scope.
 
 ## Verify
 
-Every row has a `profile_url` and a `source_url`; open both for manual review.
-`docs/VERIFICATION.md` documents exactly which table row each figure was read from,
-and flags every irregularity found (Q1–Q15).
+Every row has a `profile_url` and a `source_url`. Open both. Where a second page was
+read, `article_url` is set and linked from the row notes.
+`docs/VERIFICATION.md` records which table cell each figure was read from.
 
 ## Remaining work
 
