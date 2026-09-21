@@ -26,6 +26,15 @@ async function load() {
   const qEl = document.getElementById("q");
   const sortBtn = document.getElementById("sort-metric");
 
+  // Rebuild the platform filter from the data so new platforms can't be missed.
+  const platformSelect = document.getElementById("platform");
+  const platforms = [...new Set(master.entries.map((e) => e.platform))].sort();
+  platformSelect.innerHTML =
+    '<option value="all">All</option>' +
+    platforms
+      .map((p) => `<option value="${esc(p)}">${esc(p === "X" ? "X (Twitter)" : p)}</option>`)
+      .join("");
+
   let sortDir = 0; // 0 = insertion order, -1 = metric desc, 1 = metric asc
 
   function render() {
