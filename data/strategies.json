@@ -30,6 +30,11 @@
       "name": "Facebook Pages",
       "url": "https://www.facebook.com/help",
       "why": "Official Facebook Help Center."
+    },
+    {
+      "name": "YouTube Creators",
+      "url": "https://www.youtube.com/creators/",
+      "why": "Official YouTube education/resources for channel growth."
     }
   ],
   "observed_patterns": [
@@ -92,6 +97,46 @@
       "pattern": "Industrial content production",
       "example": "5-Minute Crafts (147M Facebook followers)",
       "note": "Studio-produced short DIY/life-hack videos at high volume; growth from format and volume, not personality. Quality/accuracy of hacks is publicly criticized — not an endorsement."
+    },
+    {
+      "pattern": "Kids / family co-viewing at massive scale",
+      "example": "Cocomelon (202M), Vlad and Niki (150M), Kids Diana Show (138M), Like Nastya (133M)",
+      "note": "Three of the top-10 YouTube channels are kids' channels (batch 3); children re-watch repeatedly and parents co-view, multiplying watch-time signals. Managed by families/studios, not solo creators."
+    },
+    {
+      "pattern": "Documented per-day growth rate",
+      "example": "MrBeast: about 133,000 subscribers per day (Wikipedia YouTube list, June 2026)",
+      "note": "The only per-day growth rate stated directly on a cited list page; the kind of delta this project wants to track across snapshots."
+    },
+    {
+      "pattern": "Cross-platform reach compounding",
+      "example": "MrBeast 517M YouTube + 140.9M TikTok; Ronaldo 678M Instagram + 114.3M X",
+      "note": "The two largest individual followings on the leaderboard both replicate top-tier reach on a second platform; platform-native audiences add rather than substitute."
+    },
+    {
+      "pattern": "Growth-leadership turnover on live platforms",
+      "example": "Twitch: Ninja first to 10M followers, now #3; Kai Cenat (21.4M) and Ibai (20.4M) lead with event-style streams",
+      "note": "Platform leaders change within ~5 years; formats (special events, collabs) overtook the first solo-gaming wave — momentum requires format renewal."
+    },
+    {
+      "pattern": "Platform-owner advantage is not organic",
+      "example": "@elonmusk 241.6M on X",
+      "note": "Wikipedia states X's owner partially acquired followers via code changes favoring his own posts; flagged in the leaderboard so the 'organic growth' competition is not skewed by it."
+    },
+    {
+      "pattern": "Trend-creation beats trend-participation (beauty niche)",
+      "example": "NikkieTutorials' 'The Power of Makeup' (2015) spawned an imitator format",
+      "note": "Starting a replicable format recruits other creators into promoting it; one-off trend participation does not compound."
+    },
+    {
+      "pattern": "Pets: durable niche with a hard ceiling",
+      "example": "Jiffpom 9.0M and Nala Cat 4.4M on Instagram (Guinness records, 2019/2020)",
+      "note": "Pet accounts convert to merchandise/brand deals but plateau far below platform top-50; credential milestones (records) extend the tail."
+    },
+    {
+      "pattern": "Regional-language volume publishing",
+      "example": "T-Series 315M and SET India 190M (Hindi); 28 of YouTube's top 100 are primarily Hindi",
+      "note": "High-frequency label/network output aimed at India-scale audiences; same mechanics as batch-1's non-English TikTok creators, applied by studios."
     }
   ],
   "topics_with_public_demand": [
@@ -109,6 +154,13 @@
     "Movies / entertainment news (r/movies, Netflix page)",
     "Photography / science visuals (National Geographic)",
     "DIY / life hacks (5-Minute Crafts)",
-    "Education / curiosity facts (r/todayilearned, r/science)"
+    "Education / curiosity facts (r/todayilearned, r/science)",
+    "Kids / family co-viewing content (Cocomelon, Vlad and Niki, Kids Diana Show, Like Nastya)",
+    "Gaming across formats: Let's Play (PewDiePie, Markiplier), live streaming (Ninja on Twitch)",
+    "Pets / animals as an evergreen niche (Jiffpom, Nala Cat - Guinness record holders)",
+    "Makeup / beauty tutorials (NikkieTutorials)",
+    "Politics / public figures on X (Obama, Trump, Modi)",
+    "Space / science communication (NASA on X)",
+    "Regional-language music and TV volume publishing (T-Series, SET India)"
   ]
 }
